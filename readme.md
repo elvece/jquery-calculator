@@ -1,4 +1,6 @@
-#Calculator Assignment
+##Calculator Assignment
+
+***This repo contains my solution to the following exercise:***
 
 Goal: Use jQuery to make the provided calculator markup function as a simple calculator
 
