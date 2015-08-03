@@ -1,3 +1,6 @@
+//attempt from online tutorial
+
+
 $(document).ready(function(){
   //variables for easier access
   var view = $('#screen');
@@ -44,8 +47,7 @@ $(document).ready(function(){
       var toAdd = ($this).text();
       var newValue = currentValue +toAdd;
       view.val(newValue);
-      view.data(
-        valueTwo, )
+      view.data(valueTwo, )
 
 
       }
