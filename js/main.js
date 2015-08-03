@@ -1,8 +1,46 @@
-// //attempt with my own logic
-// //jQuery
+//jQuery
 
 $(document).ready(function(){
 
+//FROM CLASS
+
+//global variables
+  var arthimeticArray = [];
+  var operator = null;
+  var screenView = $('#screen');
+
+ //appends values to the calcualtor screen
+  $('.buttons span').not('#calc').on('click', function(){
+    var keyPress = $(this).html();
+    screenView.append(keyPress);
+  });
+
+//grabs first number and operator and adds to arthmeticArray (essentially grabs everything to left of operator)
+  $('.operator').not('#cancel').not('#calc').on('click', function(){
+    var keyPress = $(this).html();
+    var calcScreenArray = screenView.html().split('');
+    operator = calcScreenArray.pop();
+    arthimeticArray.push(calcScreenArray.join(''));
+    arthimeticArray.push(operator);
+  });
+
+//grabs second number and operator and adds it to the arithmeticArray, then calls calculateValue() function and appends answer to the DOM
+  $('#calc').on('click', function(){
+    var calcScreen = screenView.html();
+    var number2 = calcScreen.split(operator)[1];
+    arthimeticArray.push(number2);
+    screenView.html(calculateValue(arthimeticArray));
+  });
+
+//cancel or clear button to empty the screen
+  $('#cancel').on('click', function(){
+    screenView.empty();
+  });
+
+});
+
+
+// //old attempt
 //   //variables for easier access
 //   var screenView = $('#screen');
 //   var numButtons = $('span:not([class]');
@@ -41,42 +79,3 @@ $(document).ready(function(){
 //   }
 
 // });
-
-//FROM CLASS
-
-//global variables
-  var arthimeticArray = [];
-  var operator = null;
-  var screenView = $('#screen');
-
- //appends values to the calcualtor screen
-  $('.buttons span').not('#calc').on('click', function(){
-    var keyPress = $(this).html();
-    screenView.append(keyPress);
-  });
-
-//grabs first number and operator and adds to arthmeticArray (essentially grabs everything to left of operator)
-  $('.operator').not('#cancel').not('#calc').on('click', function(){
-    var keyPresss = $(this).html();
-    var calcScreenArray = screenView.html().split('');
-    operator = calcScreenArray.pop();
-    arthimeticArray.push(calcScreenArray.join(''));
-    arthimeticArray.push(operator);
-  });
-
-//grabs second number and operator and adds it to the arithmeticArray, then calls calculateValue() function and appends answer to the DOM
-  $('#calc').on('click', function(){
-    var calcScreen = screenView.html();
-    var number2 = calcScreen.split(operator)[1];
-    arthimeticArray.push(number2);
-    screenView.html(calculateValue(arthimeticArray));
-  });
-
-//cancel or clear button to empty the screen
-  $('#cancel').on('click', function(){
-    screenView.empty();
-  });
-
-});
-
-
