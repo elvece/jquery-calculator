@@ -8,7 +8,7 @@ function calculateValue(resultsArray){
   secondNum = parseInt(resultsArray[2]);
 
   switch(operatorInput){
-    case '':
+    case '+':
       return (firstNum + secondNum);
     case '-':
       return (firstNum - secondNum);
@@ -22,9 +22,9 @@ function calculateValue(resultsArray){
 
 }
 
-module.exports = {
-  calculateValue: calculateValue
-};
+// module.exports = {
+//   calculateValue: calculateValue
+// };
 
 
 
