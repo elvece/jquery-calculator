@@ -30,11 +30,13 @@ $(document).ready(function(){
     var number2 = calcScreen.split(operator)[1];
     arthimeticArray.push(number2);
     screenView.html(calculateValue(arthimeticArray));
+    arthimeticArray = [];
   });
 
 //cancel or clear button to empty the screen
   $('#cancel').on('click', function(){
     screenView.empty();
+    arthimeticArray = [];
   });
 
 });
