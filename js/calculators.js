@@ -1,6 +1,4 @@
 //javaScript calculator functions
-
-//FROM CLASS
 function calculateValue(resultsArray){
   //variables
   firstNum = parseInt(resultsArray[0]);
@@ -22,9 +20,9 @@ function calculateValue(resultsArray){
 
 }
 
-// module.exports = {
-//   calculateValue: calculateValue
-// };
+module.exports = {
+  calculateValue: calculateValue
+};
 
 
 

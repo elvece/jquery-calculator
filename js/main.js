@@ -2,8 +2,6 @@
 
 $(document).ready(function(){
 
-//FROM CLASS
-
 //global variables
   var arthimeticArray = [];
   var operator = null;
