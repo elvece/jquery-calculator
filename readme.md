@@ -1,5 +1,7 @@
 ##Calculator Assignment
 
+***Note:*** This is a work in progress. Code needs to be refactored, currently broken due to tinkering.
+
 ***This repo contains my solution to the following exercise:***
 
 Goal: Use jQuery to make the provided calculator markup function as a simple calculator
