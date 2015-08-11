@@ -1,4 +1,5 @@
 //division and multiplication not working
+//needs refactoring
 
 $(document).ready(function(){
 
