@@ -1,4 +1,4 @@
-//jQuery
+//division and multiplication not working
 
 $(document).ready(function(){
 
