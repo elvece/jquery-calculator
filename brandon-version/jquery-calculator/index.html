@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="calcApp">
+<head>
+  <title>Calculator Lab</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div ng-controller="calculate" id="calculator">
+    <div id="screen-container">
+      <div id="screen">{{screen}}</div>
+    </div>
+
+    <div id="button-container">
+      <div ng-click="buttonVal()" class="buttons">
+        <span class="operator" id="cancel" >C</span>
+        <span class="operator">/</span>
+        <span class="operator">x</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span class="operator">-</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span class="operator">+</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span class="operator" id="calc">=</span>
+        <div class="l-row">
+          <span id="zero">0</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <!--<script type="text/javascript" src="js/main.js"></script>-->
+  <script type="text/javascript" src="js/angular.js"></script>
+
+</body>
+</html>
